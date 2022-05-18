@@ -1,5 +1,6 @@
 import React from 'react';
 import AddTask from '../AddTask/AddTask';
+import MyTasks from '../MyTasks/MyTasks';
 
 const Home = () => {
     return (
