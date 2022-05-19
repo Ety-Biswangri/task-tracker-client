@@ -3,6 +3,7 @@ import './MyTasks.css';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { Button, Card, Container } from 'react-bootstrap';
+import { toast } from 'react-toastify';
 
 const MyTasks = () => {
     const [tasks, setTasks] = useState([]);
@@ -33,7 +34,7 @@ const MyTasks = () => {
     }
 
     const handleComplete = () => {
-
+        toast("Wow! The task is completed");
     }
 
     const displayDescription = (description) => {
