@@ -11,7 +11,7 @@ const Header = () => {
 
     return (
         <Navbar collapseOnSelect expand="lg" variant="dark" sticky="top" style={{
-            backgroundColor: "#132a13"
+            backgroundColor: "#386641"
         }} >
             <Container>
                 <Navbar.Brand as={Link} to="/home">Task Tracker</Navbar.Brand>
@@ -29,10 +29,10 @@ const Header = () => {
                             user
                                 ?
                                 <>
-                                    <Button style={{ backgroundColor: "lightblue", color: "black", fontWeight: "600" }} onClick={() => signOut(auth)}>Log Out</Button>
+                                    <Button style={{ backgroundColor: "#ecf39e", color: "black", fontWeight: "600" }} onClick={() => signOut(auth)}>Log Out</Button>
                                 </>
                                 :
-                                <Link to="/login"><Button style={{ backgroundColor: "lightblue", color: "black", fontWeight: "600" }}>Login</Button></Link>
+                                <Nav.Link as={Link} to="/login" style={{ fontWeight: "600" }}>Login</Nav.Link>
                         }
                     </Nav>
                 </Navbar.Collapse>

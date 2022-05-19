@@ -47,7 +47,7 @@ const MyTasks = () => {
 
                 <div className="my-4 card-container ">
                     {
-                        tasks.map(task => <Card key={task._id} className="h-100">
+                        tasks.map(task => <Card key={task._id} className="h-100" style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
                             <Card.Body>
                                 <Card.Title className='fw-bolder'>{task.name}</Card.Title>
                                 <Card.Text title={task.description}>
@@ -58,11 +58,11 @@ const MyTasks = () => {
 
                                 <div className='d-flex justify-content-center'>
                                     <div className=' me-5'>
-                                        <button className='w-100  mx-3' onClick={() => handleDelete(task._id)}>Delete</button>
+                                        <button className='w-100  mx-3 bg-danger text-white border-0 p-1 rounded' onClick={() => handleDelete(task._id)}>Delete</button>
                                     </div>
 
                                     <div className=' me-2'>
-                                        <button className=' w-100' onClick={() => handleComplete()}>Complete</button>
+                                        <button className=' w-100 bg-success text-white border-0 p-1 mx-2 rounded' onClick={() => handleComplete()}>Complete</button>
                                     </div>
                                 </div>
                             </Card.Body>
@@ -70,7 +70,7 @@ const MyTasks = () => {
                         )
                     }
                 </div>
-            </Container>
+            </Container >
         </div >
     );
 };
