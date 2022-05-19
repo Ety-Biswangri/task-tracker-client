@@ -10,14 +10,11 @@ const AddTask = () => {
     const { register, handleSubmit } = useForm();
     const [user] = useAuthState(auth);
 
-    console.log(user.email);
-
     const onSubmit = (data, event) => {
-        console.log(data)
         event.target.reset();
         toast('Task is Added');
 
-        const url = `http://localhost:5000/tasks`;
+        const url = `https://glacial-escarpment-44117.herokuapp.com/tasks`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -46,7 +43,7 @@ const AddTask = () => {
 
             <div className="d-flex justify-content-center align-itmes-center">
                 <Link to="/myTasks">
-                    <button className=' mx-auto button-add-task'>My Tasks</button>
+                    <button className=' mx-auto button-add-task'>All Tasks</button>
                 </Link>
 
             </div>

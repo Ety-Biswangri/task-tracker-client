@@ -9,7 +9,7 @@ const MyTasks = () => {
     const [user] = useAuthState(auth);
 
     useEffect(() => {
-        const url = `http://localhost:5000/tasks?email=${user?.email}`;
+        const url = `https://glacial-escarpment-44117.herokuapp.com/tasks?email=${user?.email}`;
         fetch(url)
             .then(res => res.json())
             .then(result => {
@@ -21,7 +21,7 @@ const MyTasks = () => {
         const confirmation = window.confirm("Are you sure to delete the item?");
 
         if (confirmation) {
-            fetch(`http://localhost:5000/task/${id}`, {
+            fetch(`https://glacial-escarpment-44117.herokuapp.com/task/${id}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())
@@ -65,12 +65,6 @@ const MyTasks = () => {
                                         <button className=' w-100' onClick={() => handleComplete()}>Complete</button>
                                     </div>
                                 </div>
-
-                                {/* <div className='d-flex justify-content-center'>
-                                    <Button style={{ marginRight: "6rem" }} className='w-100  mx-3' onClick={() => handleDelete(task._id)}>Delete</Button>
-
-                                    <button style={{ marginLeft: "6rem", padding: "0.47rem 0.6rem" }} className=' w-100' onClick={() => handleComplete()}>Complete</button>
-                                </div> */}
                             </Card.Body>
                         </Card>
                         )
