@@ -14,7 +14,7 @@ const Header = () => {
             backgroundColor: "#386641"
         }} >
             <Container>
-                <Navbar.Brand as={Link} to="/home">Task Tracker</Navbar.Brand>
+                <Navbar.Brand>Task Tracker</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
