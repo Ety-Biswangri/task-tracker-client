@@ -35,6 +35,8 @@ const MyTasks = () => {
 
     const handleComplete = () => {
         toast("Wow! The task is completed");
+
+        return tasks.description.style.removeProperty('text-decoration');
     }
 
     const displayDescription = (description) => {
@@ -42,7 +44,7 @@ const MyTasks = () => {
     }
 
     return (
-        <div className='my-items'>
+        <div className='my-tasks'>
             <Container>
                 <h2 className='text-center my-5' style={{ color: "#01497c" }}>My Total Tasks: {tasks.length}</h2>
 
@@ -63,7 +65,7 @@ const MyTasks = () => {
                                     </div>
 
                                     <div className=' me-2'>
-                                        <button className=' w-100 bg-success text-white border-0 p-1 mx-2 rounded' onClick={() => handleComplete()}>Complete</button>
+                                        <button className=' w-100 bg-success text-white border-0 p-1 mx-2 rounded' onClick={handleComplete}>Complete</button>
                                     </div>
                                 </div>
                             </Card.Body>
